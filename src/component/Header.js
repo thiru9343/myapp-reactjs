@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 
 class Header extends Component{
 
@@ -13,11 +13,13 @@ class Header extends Component{
     render(){
         const mydata=this.state;
         return(
-            <header>
-            <p className="logo">{this.state.title}</p>
-            <input/>
-            <p>{mydata.details}</p>
-            </header>
+            <Fragment>
+                <header>
+                <p className="logo">{this.state.title}</p>
+                <input/>
+                <p>{mydata.details}</p>
+                </header>
+            </Fragment>
         )
     }
 }
